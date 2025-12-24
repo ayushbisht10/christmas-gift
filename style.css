@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(120deg, #fdfbfb, #ebedee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container, .card, .message {
+  text-align: center;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 320px;
+}
+
+.fade-text {
+  animation: fade 2s infinite alternate;
+}
+
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+.card img, .message img {
+  width: 120px;
+  margin: 15px 0;
+}
+
+button {
+  background: #1e90ff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0f6cd1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Snow animation */
+.snow::before {
+  content: "❄ ❄ ❄ ❄ ❄ ❄ ❄ ❄ ❄ ❄";
+  position: absolute;
+  top: -10%;
+  width: 100%;
+  font-size: 24px;
+  animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(120vh); }
+}
