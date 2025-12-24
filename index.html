@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Christmas Gift</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Snow Animation -->
+  <div class="snow"></div>
+
+  <!-- Step 1 -->
+  <div class="container" id="step1">
+    <h1 class="fade-text">For someone special 🎄</h1>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="card hidden" id="step2">
+    <img src="snowman.png" alt="Snowman">
+    <h2>
+      This Christmas,<br>
+      something special for you
+    </h2>
+    <button onclick="openMessage()">Open 🎁</button>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="message hidden" id="step3">
+    <h2>Merry Christmas ❤️</h2>
+    <p>
+      This Christmas, I just want you to know how special you are to me.
+      You are not just a part of my life, you are the reason behind my smile.
+    </p>
+    <img src="santa.png" alt="Santa">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
