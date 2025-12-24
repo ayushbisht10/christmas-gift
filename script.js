@@ -98,18 +98,40 @@ function openMessage() {
 /* Typing animation */
 function typeText() {
   const container = document.getElementById("typingText");
+  const cursor = document.getElementById("cursor");
   container.innerHTML = "";
+  container.appendChild(cursor);
+
   let i = 0;
 
   function typing() {
     if (i < fullMessage.length) {
-      container.innerHTML += fullMessage.charAt(i) === "\n"
-        ? "<br><br>"
-        : fullMessage.charAt(i);
+      const char = fullMessage.charAt(i);
+
+      if (char === "\n") {
+        container.insertBefore(document.createElement("br"), cursor);
+        container.insertBefore(document.createElement("br"), cursor);
+      } else {
+        container.insertBefore(document.createTextNode(char), cursor);
+      }
+
       i++;
-      setTimeout(typing, 35); // typing speed
+      setTimeout(typing, 70); // ⏳ slow typing speed
     }
   }
 
   typing();
 }
+function createFlower() {
+  const flower = document.createElement("div");
+  flower.className = "flower";
+  flower.innerText = ["🌸","🌼","🌺","💮"][Math.floor(Math.random()*4)];
+  flower.style.left = Math.random() * 100 + "vw";
+  flower.style.animationDuration = 8 + Math.random() * 5 + "s";
+  document.body.appendChild(flower);
+
+  setTimeout(() => flower.remove(), 13000);
+}
+
+setInterval(createFlower, 800);
+
