@@ -29,17 +29,25 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px);
-  background-size: 18px 18px;
-  animation: snowMove 14s linear infinite;
-  opacity: 0.6;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.9) 2px, transparent 2px),
+    radial-gradient(rgba(255,255,255,0.6) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px);
+  background-size: 20px 20px, 30px 30px, 40px 40px;
+  animation: snowMove 18s linear infinite;
 }
+
 
 
 @keyframes snowMove {
-  from { background-position: 0 0; }
-  to { background-position: 0 100vh; }
+  from {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 0 100vh, 0 150vh, 0 200vh;
+  }
 }
+
 
 /* Flowers */
 .flower {
