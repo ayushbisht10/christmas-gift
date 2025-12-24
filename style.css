@@ -17,11 +17,13 @@ body {
   );
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: #f1c40f; /* soft yellow text */
-  overflow: hidden;
+  align-items: flex-start; /* important */
+  color: #f1c40f;
+  overflow-y: auto; /* ✅ scroll allowed */
+  overflow-x: hidden;
   text-align: center;
 }
+
 
 
 
@@ -82,6 +84,8 @@ body {
   max-width: 380px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   animation: fadeIn 1s ease forwards;
+margin-top: 40px;
+  margin-bottom: 60px;
 }
 
 
